@@ -45,14 +45,13 @@ void explainVector()
     v.emplace_back(20);
     v.push_back(30);
 
-    cout << "Size  : " << v.size() << endl;
-    cout << "Front : " << v.front() << endl;
-    cout << "Back  : " << v.back() << endl;
-
     cout << "Elements: ";
     for (int x : v) cout << x << " ";
     cout << endl;
 
+    cout << "Size  : " << v.size() << endl;
+    cout << "Front : " << v.front() << endl;
+    cout << "Back  : " << v.back() << endl;
 
     cout << "\n===== VECTOR OF PAIRS =====\n";
 
