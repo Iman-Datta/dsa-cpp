@@ -22,7 +22,6 @@ int secondLargestElement(vector<int>::iterator fst,vector<int>::iterator lst){
     return secondMax;
 }
 
-
 int main () {
     vector<int> numbers = {78, 23, 65, 34, 21};
     cout << "The second largest number is: " << secondLargestElement(numbers.begin(), numbers.end()) << endl;
