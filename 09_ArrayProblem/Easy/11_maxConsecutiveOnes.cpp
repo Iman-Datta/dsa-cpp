@@ -4,14 +4,14 @@
 using namespace std;
 
 int maxConsecutive(vector<int> &vec){
-    int count = 0, maxCount;
+    int count = 0, maxCount = 0;
     for (int i = 0; i < vec.size(); i++){
-        if (vec[i] == vec[i+1]) {
+        if (vec[i] == 1) {
             count ++;
-            maxCount = count;
+            maxCount = max(count, maxCount);
         }
         else{
-            maxCount = 0;
+            count = 0;
         }
     }
     return maxCount;
