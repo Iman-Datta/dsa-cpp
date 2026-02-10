@@ -1,5 +1,4 @@
-// Pair sum
-// Sorted array
+// Given a sorted array and a number X, search two elements of the array such that their sum is X. Expected time complexity is O(n).
 
 # include <iostream>
 # include <vector>
