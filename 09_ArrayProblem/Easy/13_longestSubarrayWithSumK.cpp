@@ -1,8 +1,7 @@
-// Sliding window approach: Only applicable on positive number only
+// Sliding window approach: Only applicable on POSITIVE number only
 
 # include <iostream>
 # include <vector>
-# include <unordered_map>
 
 using namespace std;
 
