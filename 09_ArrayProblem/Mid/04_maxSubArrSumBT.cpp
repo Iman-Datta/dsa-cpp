@@ -1,0 +1,28 @@
+// Questiom: Given an integer array nums, find the subarray with the largest sum, and return its sum.
+// Time complexcity = O(n^2)
+# include <iostream>
+# include <vector>
+# include <climits>
+
+using namespace std;
+
+int maxSubArrSum(vector<int> &nums){
+    int n = nums.size();
+    int maxSum = INT_MIN;
+
+    for(int i = 0; i < n; i++){
+        int subArrSum = 0;
+        for (int j = i; j < n; j++){
+            subArrSum += nums[j];
+            maxSum = max(subArrSum,maxSum);
+        }
+    }
+    return maxSum;
+}
+
+int main() {
+    vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
+    int ans  = maxSubArrSum(nums);
+    cout << "Maximum sub array sum of your array is: " << ans << endl;
+    return 0;
+}
