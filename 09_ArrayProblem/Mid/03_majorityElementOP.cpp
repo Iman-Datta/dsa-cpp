@@ -18,7 +18,7 @@ int mejorityElement(vector<int> &nums){
         if(count <= 0) {
             count = 1;
             el = nums[i];
-        }
+        }  
         else if(nums[i] == el) count ++;
         else count --;
     }
