@@ -2,12 +2,13 @@
 // Time complexcity = O(n^3)
 # include <iostream>
 # include <vector>
+# include <climits>
 
 using namespace std;
 
 int maxSubArrSum(vector<int> &nums){
     int n = nums.size();
-    int maxSum = 0;
+    int maxSum = INT_MIN;
 
     for(int i = 0; i < n; i++){
         for (int j = i; j < n; j++){
