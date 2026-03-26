@@ -13,8 +13,6 @@ bool subSetSum(int index, int target, vector<int>& nums) {
     if (target >= nums[index]) {
         take = subSetSum(index + 1, target - nums[index], nums);
     }
-
-
     bool skip = subSetSum(index + 1, target, nums);
 
     return take || skip;
