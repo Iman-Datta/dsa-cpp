@@ -29,20 +29,19 @@ int main () {
     return 0;
 }
 
-// bool isSort(const vector<int>& vec) {
-//     int sz = vec.size();
-//     int checkPoint = 0;
-
-//     for (int i = 0; i < sz - 1; i++) {
-//         if (vec[i] > vec[i + 1]) {
-//             checkPoint++;
-//         }
-//     }
-
-//     // circular check: last element with first
-//     if (vec[sz - 1] > vec[0]) {
-//         checkPoint++;
-//     }
-
-//     return checkPoint <= 1;
-// }
+class Solution {
+public:
+    bool check(vector<int>& vec) {
+        int sz = vec.size(), isSort;
+        for (int i = 0; i < sz; i ++){
+            if(vec[i] > vec[(i+1) % sz]){ // Check circular drop: next index = (i+1)%sz (last connects to first)
+                isSort ++;
+            }
+        }
+        if (isSort <= 1) {
+            return true;
+        }
+        else
+            return false;
+    }
+};
